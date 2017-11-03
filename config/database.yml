@@ -1,15 +1,18 @@
-development: &default
+development:
   adapter: postgresql
-  database: Valkyrie_development
-  encoding: utf8
-  min_messages: warning
-  pool: <%= Integer(ENV.fetch("DB_POOL", 5)) %>
-  reaping_frequency: <%= Integer(ENV.fetch("DB_REAPING_FREQUENCY", 10)) %>
-  timeout: 5000
+  encoding: unicode
+  database: valkyrie_dev
+  pool: 5
+  username: vagrant
+  password:
 
 test:
-  <<: *default
-  database: Valkyrie_test
+  adapter: postgresql
+  encoding: unicode
+  database: valkyrie_test
+  pool: 5
+  username: vagrant
+  password:
 
 production: &deploy
   encoding: utf8
