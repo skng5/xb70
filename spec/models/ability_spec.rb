@@ -4,10 +4,10 @@ require "cancan/matchers"
 
 describe Ability do
   subject { described_class.new(current_user) }
-  let(:current_user) { FactoryGirl.create(:user) }
-  let(:public_book) { FactoryGirl.build(:book) }
-  let(:user_owned_book) { FactoryGirl.build(:book, read_groups: [], read_users: current_user.user_key) }
-  let(:user_editable_book) { FactoryGirl.build(:book, read_groups: [], edit_users: current_user.user_key) }
+  let(:current_user) { FactoryBot.create(:user) }
+  let(:public_book) { FactoryBot.build(:book) }
+  let(:user_owned_book) { FactoryBot.build(:book, read_groups: [], read_users: current_user.user_key) }
+  let(:user_editable_book) { FactoryBot.build(:book, read_groups: [], edit_users: current_user.user_key) }
   context "when logged in as a standard user" do
     it {
       is_expected.to be_able_to(:read, public_book)
@@ -21,7 +21,7 @@ describe Ability do
     }
   end
   context "when logged in as an admin" do
-    let(:current_user) { FactoryGirl.create(:admin) }
+    let(:current_user) { FactoryBot.create(:admin) }
     it {
       is_expected.to be_able_to(:read, public_book)
       is_expected.to be_able_to(:read, user_owned_book)

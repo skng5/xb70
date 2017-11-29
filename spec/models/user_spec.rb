@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :resource do
   it "has a good admin factory" do
-    expect(FactoryGirl.build(:admin)).to be_valid
+    expect(FactoryBot.build(:admin)).to be_valid
   end
 
   describe "#to_s" do

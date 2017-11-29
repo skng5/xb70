@@ -217,10 +217,10 @@ GEM
       sxp (~> 1.0)
     erubi (1.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
+    factory_bot (4.8.2)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
+    factory_bot_rails (4.8.2)
+      factory_bot (~> 4.8.2)
       railties (>= 3.0.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
@@ -319,6 +319,7 @@ GEM
       rdf-turtle
       rdf-vocab (>= 0.8)
       slop
+    libv8 (3.16.14.19)
     link_header (0.0.8)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -420,6 +421,7 @@ GEM
       rdf (~> 2.2)
     recipient_interceptor (0.1.2)
       mail
+    ref (2.0.0)
     reform (2.2.4)
       disposable (>= 0.4.1)
       representable (>= 2.4.0, < 3.1.0)
@@ -524,6 +526,9 @@ GEM
       rdf (~> 2.0)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -583,7 +588,8 @@ DEPENDENCIES
   draper
   dry-struct (~> 0.3.0)
   dry-types
-  factory_girl_rails
+  factory_bot
+  factory_bot_rails
   fcrepo_wrapper
   formulaic
   hydra-access-controls
@@ -625,6 +631,7 @@ DEPENDENCIES
   sprockets (>= 3.0.0)
   sprockets-es6
   sqlite3
+  therubyracer
   timecop
   title
   uglifier
@@ -633,4 +640,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.3

@@ -14,6 +14,7 @@ gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "puma"
 gem "rack-canonical-host"
+gem "therubyracer"
 gem "rails", "~> 5.1.0"
 gem "recipient_interceptor"
 gem "sass-rails", "~> 5.0"
@@ -45,7 +46,8 @@ group :development, :test do
   gem "bundler-audit", ">= 0.5.0", require: false
   gem 'capybara'
   gem "dotenv-rails"
-  gem "factory_girl_rails"
+  gem "factory_bot"
+  gem "factory_bot_rails"
   gem 'fcrepo_wrapper'
   gem "pry-byebug"
   gem "pry-rails"

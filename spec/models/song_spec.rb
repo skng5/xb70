@@ -40,13 +40,13 @@ RSpec.describe Song do
   end
 
   describe "factory" do
-    let(:song) { FactoryGirl.build(:song) }
+    let(:song) { .build(:song) }
     it "builds a public song" do
       expect(song).to be_kind_of(described_class)
       expect(song.read_groups).to eq ['public']
     end
     context "when called with create" do
-      let(:song) { FactoryGirl.create_for_repository(:song) }
+      let(:song) { .create_for_repository(:song) }
       it "saves it with the configured persister" do
         expect(song.id).not_to be_nil
       end

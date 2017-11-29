@@ -61,13 +61,13 @@ RSpec.describe Book do
   end
 
   describe "factory" do
-    let(:book) { FactoryGirl.build(:book) }
+    let(:book) { FactoryBot.build(:book) }
     it "builds a public book" do
       expect(book).to be_kind_of(described_class)
       expect(book.read_groups).to eq ['public']
     end
     context "when called with create" do
-      let(:book) { FactoryGirl.create_for_repository(:book) }
+      let(:book) { FactoryBot.create_for_repository(:book) }
       it "saves it with the configured persister" do
         expect(book.id).not_to be_nil
       end

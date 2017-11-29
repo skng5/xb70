@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 RSpec.describe PagesController do
-  let(:user) { FactoryGirl.create(:admin) }
+  let(:user) { FactoryBot.create(:admin) }
   before do
     sign_in user if user
   end

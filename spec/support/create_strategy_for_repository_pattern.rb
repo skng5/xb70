@@ -4,7 +4,7 @@
 # Girl.
 #
 # Copied from:
-#   https://github.com/thoughtbot/factory_girl/issues/565
+#   https://github.com/thoughtbot/factory_bot/issues/565
 class CreateStategyForRepositoryPattern
   def association(runner)
     runner.run
@@ -22,4 +22,4 @@ class CreateStategyForRepositoryPattern
     result
   end
 end
-FactoryGirl.register_strategy(:create_for_repository, CreateStategyForRepositoryPattern)
+FactoryBot.register_strategy(:create_for_repository, CreateStategyForRepositoryPattern)

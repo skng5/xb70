@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
     sequence(:email) { |_n| "email-#{srand}@example.com" }
     password 'a password'
